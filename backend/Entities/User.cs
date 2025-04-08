@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Roles = backend.Models.Roles;
 
-namespace backend.Models
+
+namespace Entities
 {
     [Table("Users")]
 

@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using backend.Models;
+using Entities;
 
-namespace Models
+namespace Entities
 {
     [Table("Products")]
     public class Product

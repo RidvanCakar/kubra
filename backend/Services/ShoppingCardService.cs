@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using backend.Models;
+using Entities;
 using Context;
 
 namespace Services

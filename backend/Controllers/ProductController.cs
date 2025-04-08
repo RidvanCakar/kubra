@@ -1,7 +1,7 @@
 using Context;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Entities;
 using Services;
 
 namespace Controllers

@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using backend.Models;
 using Microsoft.EntityFrameworkCore;
-using Models;
+using Entities;
 
 namespace Context
 {
