@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JBKmQl7vgYw=",
+  "dgSpecHash": "LD0pRDacRdo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\.Net.csproj",
+  "projectFilePath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\.Net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RIDVAN ÇAKAR\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\RIDVAN ÇAKAR\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

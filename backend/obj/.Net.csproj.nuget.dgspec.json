@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\.Net.csproj": {}
+    "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\.Net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\.Net.csproj": {
+    "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\.Net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\.Net.csproj",
+        "projectUniqueName": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\.Net.csproj",
         "projectName": ".Net",
-        "projectPath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\.Net.csproj",
+        "projectPath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\.Net.csproj",
         "packagesPath": "C:\\Users\\RIDVAN ÇAKAR\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim-main\\backend\\obj\\",
+        "outputPath": "C:\\Users\\RIDVAN ÇAKAR\\Desktop\\Teknolojim\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\RIDVAN ÇAKAR\\AppData\\Roaming\\NuGet\\NuGet.Config",

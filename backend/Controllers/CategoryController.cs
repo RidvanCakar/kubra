@@ -11,13 +11,11 @@ using System.Text.Json.Serialization;
 using Services;
 
 
-
 namespace Controllers
 {
 
     [ApiController]
     [Route("api/[controller]/[action]")]
-
 
 
     public class CategoryController : ControllerBase
@@ -56,7 +54,7 @@ namespace Controllers
         [HttpGet("{categoryName}")]
         public async Task<IActionResult> GetProductsCategory(string categoryName)
         {
-            var product=await _categoryService.GetProductsCategory(categoryName);
+            var product=await _categoryService.GetProductsByCategoryNameAsync(categoryName);
             if (product == null || !product.Any())
             {
                 return NotFound("Ürün Bulunamadı");
