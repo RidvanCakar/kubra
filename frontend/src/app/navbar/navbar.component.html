@@ -1,0 +1,57 @@
+<nav class="bg-info text-white">
+  <div class=" mx-auto flex justify-between items-center p-2">
+    <a routerLink="/" class="text-2xl font-bold text-white mx-8">Teknolojim.com</a>
+
+    <button id="menu-toggle" class="lg:hidden text-white focus:outline-none">
+      <i class="bi bi-list text-3xl text-white"></i>
+    </button>
+
+    <div id="menu" class="hidden lg:flex flex-grow justify-between items-center">
+      <ul class="flex space-x-8 text-center my-auto">
+        <li><a routerLink="/Telefon" class="hover:underline text-white">Telefon</a></li>
+        <li><a routerLink="/Televizyon" class="hover:underline text-white">Televizyon</a></li>
+        <li><a routerLink="/Akıllı Saat" class="hover:underline text-white">Akıllı Saat</a></li>
+        <li><a routerLink="/Dizüstü Bilgisayar" class="hover:underline text-white">Dizüstü Bilgisayar</a></li>
+      </ul>
+
+      <div class="flex items-center space-x-4 mx-8">
+        <div class="flex items-center gap-4">
+          <ng-container *ngIf="!isLoggedIn; else loggedInBlock">
+            <div class="flex flex-col items-center">
+              <a routerLink="/auth">
+                <i class="bi bi-person text-3xl text-white">
+                  <a routerLink="/auth"></a>
+                </i>
+              </a>
+            </div>
+          </ng-container>
+
+          <ng-template #loggedInBlock>
+            <div class="flex items-center gap-3">
+              <p class="text-white text-bold mt-3">{{ username }}</p>
+              <button (click)="logout()" class="btn btn-outline-light text-white hover:underline">
+                <i class=" bi bi-box-arrow-right"></i>
+                Çıkış Yap
+              </button>
+            </div>
+          </ng-template>
+
+          <a routerLink="/shoppingCart">
+            <button>
+              <i class="bi bi-cart text-white text-2xl">
+              </i>
+            </button>
+          </a>
+
+          <a routerLink="/sellerAuth">
+            <button class="btn btn-outline-light d-flex align-items-center gap-2 float-right">
+              <i class="bi bi-shop"></i>
+              <span>Satıcı Ol</span>
+            </button>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

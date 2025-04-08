@@ -1,0 +1,45 @@
+<div class="max-w-7xl mx-auto p-6 bg-gray-100 min-h-screen flex gap-6">
+  <div class="flex-1 space-y-6">
+    <div *ngFor="let card of shoppingCards" class="bg-white rounded-xl p-4 shadow space-y-3">
+      <p class="text-sm font-semibold text-gray-500">Satıcı: {{ card.userName }}</p>
+
+      <div class="flex items-start gap-4">
+        <img [src]="card.imageUrl" alt="Ürün" class="w-28 h-28 object-cover rounded border" />
+
+        <div class="flex-1 space-y-2">
+          <h3 class="font-semibold text-gray-800 text-lg">{{ card.productName }}</h3>
+
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <i class="bi bi-truck"></i> Adrese Teslimat
+          </div>
+
+          <div class="flex items-center justify-between mt-4">
+            <p class="text-xl font-bold">{{ card.price * card.quantity }} TL</p>
+            <div class="flex items-center border rounded">
+              <button (click)="decreaseQuantity(card)" class="px-2 py-1 text-gray-600">-</button>
+              <span class="px-3">{{ card.quantity }}</span>
+              <button (click)="increaseQuantity(card)" class="px-2 py-1 text-gray-600">+</button>
+            </div>
+            <button (click)="deleteProduct(card.id)" class="text-red-500 text-lg hover:text-red-600">
+              <i class="bi bi-trash text-3l"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-80 space-y-4">
+    <div class="bg-white rounded-xl p-4 shadow space-y-4">
+      <h3 class="text-lg font-semibold text-gray-800">Sipariş Özeti</h3>
+      <div class="flex justify-between text-sm text-gray-600">
+        <p>Toplam:</p>
+        <p class="font-semibold text-gray-800">{{ totalPrice }} TL</p>
+      </div>
+      <button class="w-full bg-info text-white py-2 rounded hover:bg-orange-600 transition"
+        (click)="completeOrder(shoppingCards)">
+        Alışverişi Tamamla
+      </button>
+    </div>
+  </div>
+</div>

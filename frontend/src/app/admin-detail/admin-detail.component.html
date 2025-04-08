@@ -1,0 +1,92 @@
+<div class="container mt-2">
+  <h2 class="text-center text-info mb-2">Hoşgeldiniz {{username}}</h2>
+
+  <h4 class="m-2 text-center text-info">Ürün Yönetimi</h4>
+
+  <div class="row">
+    <div class="col-md-6">
+      <form (ngSubmit)="addProduct(name.value, price.value, categoryId.value, imageUrl.value, stock.value)">
+        <div class="mb-3">
+          <label for="name" class="form-label text-info">Ürün Adı</label>
+          <input #name type="text" class="form-control shadow-sm" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label text-info">Fiyat</label>
+          <input #price type="number" class="form-control shadow-sm" id="price" required>
+        </div>
+        <div class="mb-3">
+          <label for="categoryId" class="form-label text-info">Kategori ID</label>
+          <input #categoryId type="number" class="form-control shadow-sm" id="categoryId" required>
+        </div>
+        <div class="mb-3">
+          <label for="imageUrl" class="form-label text-info">Görsel URL</label>
+          <input #imageUrl type="text" class="form-control shadow-sm" id="imageUrl" required>
+        </div>
+        <div class="mb-3">
+          <label for="stock" class="form-label text-info">Stok</label>
+          <input #stock type="number" class="form-control shadow-sm" id="stock" required>
+        </div>
+        <button type="submit" class="btn btn-info w-100 py-2">Ürün Ekle</button>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <table class="table table-bordered table-striped mt-4 shadow-sm">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Adı</th>
+            <th>Fiyat</th>
+            <th>Kategori</th>
+            <th>Stok</th>
+            <th>İşlemler</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.categoryName }}</td>
+            <td>{{ product.stock }}</td>
+            <td>
+              <button class="btn btn-sm btn-success me-1" (click)="onSelectProduct(product)">Düzenle</button>
+              <button class="btn btn-sm btn-danger" (click)="deleteProduct(product)">Sil</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div *ngIf="selectedProduct" class="mt-3">
+    <input type="hidden" #id name="id" [value]="selectedProduct.id">
+
+    <div class="card shadow-sm p-3">
+      <h5 class="text-center text-info">Ürünü Düzenle</h5>
+
+      <div class="form-group">
+        <label for="name" class="text-info">Ürün Adı</label>
+        <input [(ngModel)]="selectedProduct.name" type="text" class="form-control" name="name">
+      </div>
+      <div class="form-group">
+        <label for="price" class="text-info">Fiyat</label>
+        <input [(ngModel)]="selectedProduct.price" type="number" class="form-control" name="price">
+      </div>
+      <div class="form-group">
+        <label for="categoryId" class="text-info">Kategori ID</label>
+        <input [(ngModel)]="selectedProduct.categoryId" type="number" class="form-control" name="categoryId">
+      </div>
+      <div class="form-group">
+        <label for="imageUrl" class="text-info">Görsel URL</label>
+        <input [(ngModel)]="selectedProduct.imageUrl" type="text" class="form-control" name="imageUrl">
+      </div>
+      <div class="form-group">
+        <label for="stock" class="text-info">Stock</label>
+        <input [(ngModel)]="selectedProduct.stock" type="text" class="form-control" name="stock">
+      </div>
+
+      <button class="btn btn-success w-100 py-2 mt-3" (click)="editProduct(selectedProduct)">Ürünü Düzenle</button>
+    </div>
+  </div>
+</div>
